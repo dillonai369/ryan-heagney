@@ -697,6 +697,33 @@ footer {
   .footer-top { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
 }
+
+/* ── LOAD-IN ANIMATIONS ── */
+@keyframes popIn {
+  0%   { opacity: 0; transform: scale(0.7) translateY(10px); }
+  70%  { transform: scale(1.05) translateY(-2px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroOpen {
+  0%   { opacity: 0; transform: scale(0.94); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.hero-float-tag {
+  opacity: 0;
+  animation: popIn 0.6s cubic-bezier(0.34,1.56,0.64,1) 1.1s forwards;
+}
+.hero-badge {
+  opacity: 0;
+  animation: popIn 0.6s cubic-bezier(0.34,1.56,0.64,1) 1.3s forwards;
+}
+.hero-image-wrap {
+  animation: heroOpen 0.9s ease 0.3s both !important;
+}
 </style>
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head>
@@ -763,17 +790,17 @@ footer {
       </div>
       <div class="hero-trust">
         <div class="trust-item">
-          <span class="trust-num">2,500+</span>
+          <span class="trust-num" data-count="2500" data-suffix="+">0</span>
           <span class="trust-label">Families Protected</span>
         </div>
         <div class="hero-divider"></div>
         <div class="trust-item">
-          <span class="trust-num">5</span>
+          <span class="trust-num" data-count="5" data-suffix="">0</span>
           <span class="trust-label">Years Experience</span>
         </div>
         <div class="hero-divider"></div>
         <div class="trust-item">
-          <span class="trust-num">50+</span>
+          <span class="trust-num" data-count="50" data-suffix="+">0</span>
           <span class="trust-label">A-Rated Carriers</span>
         </div>
       </div>
@@ -1237,5 +1264,34 @@ const observer = new IntersectionObserver((entries) => {
 revealEls.forEach(el => observer.observe(el));
 </script>
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+<script>
+(function() {
+  function animateCounter(el) {
+    var target = parseInt(el.dataset.count);
+    var suffix = el.dataset.suffix || '';
+    var duration = 2800;
+    var start = null;
+    function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+    function step(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var val = Math.floor(easeOut(progress) * target);
+      // Add comma for thousands
+      el.textContent = val >= 1000 ? val.toLocaleString() + suffix : val + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target >= 1000 ? target.toLocaleString() + suffix : target + suffix;
+    }
+    requestAnimationFrame(step);
+  }
+
+  // Start counters after 0.9s (when hero has loaded in)
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      document.querySelectorAll('.trust-num[data-count]').forEach(animateCounter);
+    }, 900);
+  });
+})();
+</script>
 </body>
 </html>
