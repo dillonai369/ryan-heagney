@@ -687,6 +687,7 @@ footer {
   .footer-bottom { flex-direction: column; align-items: flex-start; }
 }
 </style>
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head>
 <body>
 
@@ -744,7 +745,7 @@ footer {
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           Get a Free Quote
         </a>
-        <a href="book.html" class="btn-outline">
+        <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/ryanheagneysfc/life-insurance-meeting-w-ryan-heagney'});return false;" class="btn-outline">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
           Book a Call
         </a>
@@ -1115,7 +1116,7 @@ footer {
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         Get Your Free Quote
       </a>
-      <a href="book.html" class="btn-outline-white">
+      <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/ryanheagneysfc/life-insurance-meeting-w-ryan-heagney'});return false;" class="btn-outline-white">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
         Schedule a Call
       </a>
@@ -1161,14 +1162,14 @@ footer {
           <li><a href="about.html">About Ryan</a></li>
           <li><a href="testimonials.html">Client Testimonials</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="book.html">Book a Call</a></li>
+          <li><a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/ryanheagneysfc/life-insurance-meeting-w-ryan-heagney'});return false;">Book a Call</a></li>
         </ul>
       </div>
       <div>
         <div class="footer-col-title">Get Started</div>
         <ul class="footer-links">
           <li><a href="quote.html">Free Quote</a></li>
-          <li><a href="book.html">Schedule a Meeting</a></li>
+          <li><a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/ryanheagneysfc/life-insurance-meeting-w-ryan-heagney'});return false;">Schedule a Meeting</a></li>
           <li><a href="contact.html">Send a Message</a></li>
         </ul>
         <div style="margin-top:24px;">
@@ -1224,5 +1225,6 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
 revealEls.forEach(el => observer.observe(el));
 </script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body>
 </html>
