@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service | Ryan Heagney</title>
+<meta name="description" content="Terms of Service for Ryan Heagney / Legacy Equity Partners.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@300;400;500;600;700&family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue-primary: #0050B0;
+  --blue-secondary: #5080C0;
+  --blue-dark: #003880;
+  --blue-light: #EBF2FF;
+  --black: #0D0D0D;
+  --white: #FFFFFF;
+  --gray-light: #F5F7FB;
+  --gray-mid: #E8ECF4;
+  --gray-text: #6B7280;
+  --gold: #C9A84C;
+  --font-display: "Barlow Condensed", "Barlow Semi Condensed", sans-serif;
+  --font-body: "Barlow", sans-serif;
+  --font-mono: "Barlow Semi Condensed", sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font-body);
+  color: var(--black);
+  background: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAVBAR ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 3%;
+  height: 72px;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,80,176,0.08);
+  box-shadow: 0 4px 30px rgba(0,56,128,0.06);
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 12px; text-decoration: none;
+}
+.nav-logo-text { display: flex; flex-direction: column; line-height: 1; }
+.nav-logo-name {
+  font-family: var(--font-display); font-weight: 800; font-size: 17px;
+  color: var(--black); letter-spacing: 0.06em; text-transform: uppercase;
+}
+.nav-logo-sub {
+  font-family: var(--font-mono); font-size: 9px; font-weight: 600;
+  color: var(--blue-primary); letter-spacing: 0.22em; text-transform: uppercase;
+  margin-top: 3px;
+}
+.nav-links {
+  display: flex; align-items: center; gap: 32px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 13.5px; font-weight: 500; color: var(--black);
+  text-decoration: none; letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--blue-primary); }
+.nav-cta {
+  background: var(--blue-primary); color: var(--white) !important;
+  padding: 9px 22px; border-radius: 6px;
+  font-size: 13px !important; font-weight: 600 !important;
+  transition: background 0.2s, transform 0.2s !important;
+  letter-spacing: 0.04em !important;
+}
+.nav-cta:hover { background: var(--blue-dark) !important; transform: translateY(-1px) !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.hamburger span { width: 24px; height: 2px; background: var(--black); border-radius: 2px; transition: all 0.3s; display: block; }
+.mobile-menu {
+  display: none; position: fixed; top: 72px; left: 0; right: 0;
+  background: var(--white); border-bottom: 1px solid var(--gray-mid);
+  padding: 20px 5% 28px; z-index: 99;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+.mobile-menu.open { display: block; }
+.mobile-menu a {
+  display: block; padding: 12px 0; border-bottom: 1px solid var(--gray-mid);
+  font-size: 15px; font-weight: 500; color: var(--black); text-decoration: none;
+}
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-cta-wrap { margin-top: 16px; }
+.mobile-cta-wrap a { border-bottom: none !important; }
+
+/* ── PAGE HEADER ── */
+.page-header {
+  background: var(--black);
+  padding: 140px 5% 72px;
+  position: relative;
+  overflow: hidden;
+}
+.page-header::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 80% at 80% 50%, rgba(0,80,176,0.28) 0%, transparent 60%),
+              linear-gradient(135deg, #0D0D0D 0%, #0a1628 60%, #0D0D0D 100%);
+}
+.page-header-inner {
+  position: relative; z-index: 2;
+  max-width: 860px; margin: 0 auto;
+}
+.page-header-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-mono); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--blue-secondary); margin-bottom: 20px;
+}
+.page-header-eyebrow::before {
+  content: ""; width: 28px; height: 1px; background: var(--blue-secondary);
+}
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 5vw, 62px);
+  font-weight: 800; line-height: 1.0;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin-bottom: 16px;
+}
+.page-header-meta {
+  font-size: 14px; color: rgba(255,255,255,0.4);
+  letter-spacing: 0.02em;
+}
+
+/* ── CONTENT ── */
+.content-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 72px 5% 96px;
+}
+
+.tos-section {
+  margin-bottom: 52px;
+}
+.tos-section:last-child {
+  margin-bottom: 0;
+}
+
+.tos-section h2 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--blue-dark);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--blue-light);
+}
+
+.tos-section h3 {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--blue-primary);
+  margin-bottom: 10px;
+  margin-top: 28px;
+}
+.tos-section h3:first-child { margin-top: 0; }
+
+.tos-section p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #3a3a3a;
+  margin-bottom: 14px;
+}
+.tos-section p:last-child { margin-bottom: 0; }
+
+.tos-section a {
+  color: var(--blue-primary);
+  text-decoration: none;
+}
+.tos-section a:hover { text-decoration: underline; }
+
+/* ── FOOTER ── */
+footer {
+  background: #070707; color: rgba(255,255,255,0.6);
+  padding: 64px 5% 32px;
+}
+.footer-inner { max-width: 1400px; margin: 0 auto; }
+.footer-top {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 48px; padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+.footer-logo-text { font-family: var(--font-display); font-size: 17px; font-weight: 800; color: var(--white); letter-spacing: 0.08em; text-transform: uppercase; }
+.footer-tagline { font-size: 13.5px; line-height: 1.7; max-width: 260px; margin-bottom: 20px; }
+.footer-contact-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; margin-bottom: 8px; color: rgba(255,255,255,0.5);
+}
+.footer-contact-item svg { width: 14px; height: 14px; color: var(--blue-secondary); flex-shrink: 0; }
+.footer-col-title {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--white);
+  margin-bottom: 20px; font-family: var(--font-mono);
+}
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 13.5px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--white); }
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 28px; flex-wrap: wrap; gap: 16px;
+}
+.footer-copy { font-size: 12px; color: rgba(255,255,255,0.3); line-height: 1.6; max-width: 600px; }
+.footer-legal-links { display: flex; gap: 20px; }
+.footer-legal-links a {
+  font-size: 12px; color: rgba(255,255,255,0.3);
+  text-decoration: none; transition: color 0.2s;
+}
+.footer-legal-links a:hover { color: var(--white); }
+.footer-npn { margin-top: 6px; font-size: 11px; color: rgba(255,255,255,0.2); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 480px) {
+  .footer-top { grid-template-columns: 1fr; gap: 32px; }
+  .content-wrap { padding: 52px 5% 72px; }
+}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a class="nav-logo" href="/">
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Ryan Heagney</span>
+      <span class="nav-logo-sub">Legacy Equity Partners</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#why">Why Ryan</a></li>
+    <li><a href="/#testimonials">Testimonials</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="quote.html" class="nav-cta">Get a Free Quote</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/#about">About</a>
+  <a href="/#services">Services</a>
+  <a href="/#why">Why Ryan</a>
+  <a href="/#testimonials">Testimonials</a>
+  <a href="/#faq">FAQ</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-cta-wrap">
+    <a href="quote.html" style="display:inline-block;background:var(--blue-primary);color:#fff;padding:11px 24px;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none;">Get a Free Quote</a>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-header-eyebrow">Legal</div>
+    <h1>Terms of Service</h1>
+    <div class="page-header-meta">Ryan Heagney &nbsp;·&nbsp; 5350 E Deer Valley Rd, Phoenix, AZ 85054 &nbsp;·&nbsp; Effective Date: February 10, 2021</div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content-wrap">
+
+  <div class="tos-section">
+    <h2>SMS Messaging Terms &amp; Compliance</h2>
+
+    <h3>1. Program Description</h3>
+    <p>This messaging program sends appointment confirmations, reminders, rescheduling updates, customer support communications, and service-related notifications to customers who engage with Ryan Heagney via our website at <a href="https://ryanheagney.com">https://ryanheagney.com</a>, scheduling forms, or in-person processes, and who have explicitly opted in to receive SMS notifications.</p>
+    <p>Opt-in may be collected via web forms with a dedicated SMS consent checkbox, appointment booking forms, paper forms or in-person consent, or other documented methods.</p>
+    <p>Consent is not a condition of purchase.</p>
+
+    <h3>2. Cancellation (Opt-Out) Instructions</h3>
+    <p>You can cancel the SMS service at any time by replying with STOP. We also recognize UNSUBSCRIBE, CANCEL, END, and QUIT.</p>
+    <p>After you text STOP (or a recognized equivalent), we will send a confirmation message and you will no longer receive SMS messages from us.</p>
+    <p>To rejoin, sign up again through any of our consent methods.</p>
+
+    <h3>3. Support Information</h3>
+    <p>For help, reply with HELP or contact us at <a href="mailto:assist@ryanheagney.com">assist@ryanheagney.com</a> or call <a href="tel:7542286687">754-228-6687</a> during regular business hours.</p>
+
+    <h3>4. Carrier Liability</h3>
+    <p>Carriers are not liable for delayed or undelivered messages.</p>
+
+    <h3>5. Message &amp; Data Rates; Frequency</h3>
+    <p>Message and data rates may apply. Message frequency varies based on your interactions with our services, appointments, or service requests.</p>
+
+    <h3>6. Supported Carriers</h3>
+    <p>Our SMS program works with major U.S. wireless carriers (including but not limited to AT&amp;T, Verizon, and T-Mobile) and most regional carriers.</p>
+
+    <h3>7. Age Restriction</h3>
+    <p>You must be 18 years or older to participate in our SMS program.</p>
+
+    <h3>8. Privacy</h3>
+    <p>Please refer to our <a href="privacy.html">Privacy Policy</a> for information regarding how we collect, use, and protect your information.</p>
+    <p>We comply with all applicable laws and guidelines, including the Telephone Consumer Protection Act (TCPA) and CTIA principles.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>General Terms</h2>
+    <p>This website (the "Site") is owned and operated by Ryan Heagney ("Company," "we," or "us"). By using the Site, you agree to be bound by these Terms of Service and to use the Site in accordance with these Terms of Service, our Privacy Policy, and any additional terms and conditions that may apply to specific sections of the Site or to services available through the Site or from Ryan Heagney.</p>
+    <p>Accessing the Site, in any manner, whether automated or otherwise, constitutes use of the Site and your agreement to be bound by these Terms of Service.</p>
+    <p>We reserve the right to change these Terms of Service or impose new conditions on the use of the Site at any time. The updated version will be posted on this website. By continuing to use the Site after changes are posted, you accept the Terms of Service as modified.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>Intellectual Property Rights</h2>
+
+    <h3>Our Limited License to You</h3>
+    <p>The Site and all materials available on the Site are the property of Ryan Heagney and/or affiliates or licensors and are protected by copyright, trademark, and other intellectual property laws. The Site is provided solely for your personal, non-commercial use.</p>
+    <p>Unless explicitly authorized, you may not modify, copy, reproduce, republish, upload, post, transmit, translate, sell, create derivative works, exploit, or distribute in any manner any material from the Site.</p>
+    <p>You may download and/or print one copy of individual pages for your personal, non-commercial use, provided that you retain all copyright and proprietary notices.</p>
+
+    <h3>Your License to Us</h3>
+    <p>By posting or submitting any material (including comments, photos, videos, or other content) to us via the Site or other digital channels, you represent that you own the material or have obtained the necessary permissions.</p>
+    <p>You grant us a royalty-free, perpetual, irrevocable, non-exclusive, worldwide license to use, modify, transmit, create derivative works from, distribute, and publicly display such material.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>Disclaimers</h2>
+    <p>We may provide links to third-party websites. Our linking to such sites does not imply endorsement or sponsorship.</p>
+    <p>The information, services, and materials offered on or through the Site are provided "as is" without warranties of any kind, either express or implied, including implied warranties of merchantability and fitness for a particular purpose, to the fullest extent permitted by law.</p>
+    <p>You agree to indemnify and hold harmless Ryan Heagney and affiliated parties from any claims, damages, liabilities, costs, or expenses arising out of your breach of these Terms of Service.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>Online Services &amp; Third-Party Platforms</h2>
+    <p>Certain sections of the Site may allow you to access services or interact with third-party platforms. We are not responsible for the quality, reliability, or performance of third-party services.</p>
+    <p>If you interact with third-party platforms linked through the Site, information obtained during your interaction may be collected by both the third party and us as described in our Privacy Policy.</p>
+    <p>Your participation in dealings with third parties is solely between you and that third party.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>Registration &amp; Passwords</h2>
+    <p>To access certain features, you may be required to create an account. You agree to provide accurate and complete information and to maintain the confidentiality of your login credentials.</p>
+    <p>You are responsible for all activities conducted under your account. If you suspect unauthorized access, notify us immediately at <a href="mailto:assist@ryanheagney.com">assist@ryanheagney.com</a>.</p>
+    <p>We are not liable for losses resulting from your failure to safeguard account credentials.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>Termination</h2>
+    <p>We reserve the right to terminate or suspend access to the Site, without notice, if we determine that you have violated these Terms of Service or engaged in unlawful conduct.</p>
+    <p>Upon termination, you must cease all use of the Site and any content obtained from it.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>Governing Law &amp; Dispute Resolution</h2>
+    <p>These Terms of Service shall be governed by and construed in accordance with applicable United States laws.</p>
+    <p>Any disputes arising under these Terms shall be resolved through binding arbitration in the appropriate jurisdiction, and you agree to waive any right to a jury trial or participation in class-action proceedings.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>Changes to Terms of Service</h2>
+    <p>We may update these Terms of Service from time to time. The most recent version will always be available on our website with the effective date listed at the top of this page.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>Contact Information</h2>
+    <p>Ryan Heagney<br>
+    Phone: <a href="tel:7542286687">754-228-6687</a><br>
+    Email: <a href="mailto:assist@ryanheagney.com">assist@ryanheagney.com</a><br>
+    Website: <a href="https://ryanheagney.com">https://ryanheagney.com</a></p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">
+          <span class="footer-logo-text">Ryan Heagney</span>
+        </div>
+        <p class="footer-tagline">Protecting families and building financial futures through personalized life insurance strategies.</p>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          754-228-6687
+        </div>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          assist@ryanheagney.com
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="services.html#life">Life Insurance</a></li>
+          <li><a href="services.html#mortgage">Mortgage Protection</a></li>
+          <li><a href="services.html#iul">IUL / Tax-Free Retirement</a></li>
+          <li><a href="services.html#bank">Be Your Own Bank</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">About Ryan</a></li>
+          <li><a href="testimonials.html">Client Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Get Started</div>
+        <ul class="footer-links">
+          <li><a href="quote.html">Free Quote</a></li>
+          <li><a href="contact.html">Send a Message</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>
+        <div class="footer-copy">
+          © 2025 Ryan Heagney / Legacy Equity Partners. All rights reserved. Insurance products and services may not be available in all states. Ryan Heagney is a licensed insurance professional.
+        </div>
+        <div class="footer-npn">NPN: 21357233</div>
+      </div>
+      <div class="footer-legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("open");
+}
+</script>
+</body>
+</html>
