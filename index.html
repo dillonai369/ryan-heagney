@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Join the Team | Ryan Heagney — Legacy Equity Partners</title>
-<meta name="description" content="Build a career protecting families. Join Ryan Heagney and the Legacy Equity Partners team — mentorship, licensing guidance, proven systems, and a flexible structure. Apply in about 2 minutes.">
+<meta name="description" content="Build a career protecting families. Watch the overview from Ryan Heagney, then see if you qualify to join the Legacy Equity Partners team. Mentorship, licensing guidance, proven systems.">
 <link rel="canonical" href="https://ryanheagney.com/">
-<meta name="theme-color" content="#0A0A0B">
+<meta name="theme-color" content="#050505">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Join the Team | Ryan Heagney — Legacy Equity Partners">
-<meta property="og:description" content="Build a career protecting families. Mentorship, proven systems, and a team that shows up. Apply in about 2 minutes.">
+<meta property="og:description" content="Watch the overview, then see if you qualify. Mentorship, proven systems, and a team that shows up.">
 <meta property="og:url" content="https://ryanheagney.com/">
 <meta property="og:image" content="https://ryanheagney.com/images/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -17,233 +17,101 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="/images/ryan-cutout.webp" type="image/webp">
 <link rel="stylesheet" href="/styles.css">
 
 <!-- =========================================================
-     FUNNEL CONFIG — the only block you need to edit.
+     FUNNEL CONFIG — edit everything here.
+     Anything marked verified:false shows a "Sample data" tag on the live page.
+     Replace with Ryan's REAL numbers, then set verified:true.
      ========================================================= -->
 <script>
 window.FUNNEL = {
-  vslUrl: "",                 // [REPLACE] Recruitment video — YouTube, Vimeo, or .mp4 URL
-  testimonialVideo1: "",      // [REPLACE] Team video testimonial URL
-  interviewUrl: "https://calendly.com/ryanheagneysfc/life-insurance-meeting-w-ryan-heagney", // [REPLACE] with Ryan's RECRUITING interview calendar link
-  metaPixelId: "",            // [REPLACE] Meta Pixel ID (loads only when set)
-  ga4Id: "",                  // [REPLACE] GA4 Measurement ID, e.g. G-XXXXXXX
-  phone: "(754) 228-6687"
+  urgency: "Now interviewing for <b>this month's</b> group",  // keep it true
+  vslUrl: "",              // [REPLACE] Recruitment VSL — YouTube, Vimeo, or .mp4
+  testimonialVideo1: "",   // [REPLACE] Team video story
+  interviewUrl: "https://calendly.com/ryanheagneysfc/life-insurance-meeting-w-ryan-heagney", // [REPLACE] recruiting / group interview calendar
+  metaPixelId: "",         // [REPLACE]
+  ga4Id: "",               // [REPLACE]
+  phone: "(754) 228-6687",
+  carriers: [],            // [REPLACE] only carriers Ryan is actually appointed with, e.g. ["Mutual of Omaha", "Transamerica"]
+
+  production: {            // [REPLACE] Team production by month
+    verified: false,
+    months: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep"],
+    values: [18000, 24500, 31000, 38500, 52000, 61000, 79000, 96000, 118000]
+  },
+  income: {                // [REPLACE] Real comp ranges from Ryan's contracts
+    verified: false,
+    tiers: [
+      { label: "Part-Time",  hours: "10–20 hrs / week", annual: 42000,  policies: 6,  first: "Weeks 2–4", rate: "Starting level", blurb: "Build alongside your current job while you learn the business." },
+      { label: "Full-Time",  hours: "35–50 hrs / week", annual: 115000, policies: 15, first: "Weeks 1–2", rate: "Mid level",      blurb: "Make this your main focus with daily structure and coaching." },
+      { label: "Leader",     hours: "50+ hrs / week",   annual: 240000, policies: 25, first: "Week 1",    rate: "Top level + overrides", blurb: "Produce personally and grow a team of your own." }
+    ]
+  }
 };
 </script>
-
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Legacy Equity Partners","url":"https://ryanheagney.com/","logo":"https://ryanheagney.com/images/rh-logo-navy.png","founder":{"@type":"Person","name":"Ryan Heagney"},"address":{"@type":"PostalAddress","streetAddress":"7171 E Paradise Lane","addressLocality":"Scottsdale","addressRegion":"AZ","postalCode":"85254","addressCountry":"US"},"telephone":"+1-754-228-6687"}
 </script>
 </head>
 <body>
 
-<div class="ambient" aria-hidden="true">
-  <div class="blob b1" data-parallax="-0.08"></div>
-  <div class="blob b2"></div>
-  <div class="grid"></div>
-  <div class="grain"></div>
-</div>
+<div class="ambient" aria-hidden="true"><div class="glow-a"></div><div class="glow-b"></div><div class="grid"></div><canvas id="embers"></canvas><div class="grain"></div></div>
+
+<div class="topbar" role="note"><span class="live-dot"></span><span id="urgencyText">Now interviewing for <b>this month's</b> group</span></div>
 <div class="progress-top" aria-hidden="true"></div>
 
-<!-- HEADER — intentionally no nav links: one path, one action -->
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="/" aria-label="Ryan Heagney — home">
-      <img src="/images/rh-logo-white.png" alt="" width="34" height="26">
-      <span class="brand-text"><span class="brand-name">Ryan Heagney</span><span class="brand-sub">Legacy Equity Partners</span></span>
-    </a>
+    <a class="brand" href="/" aria-label="Ryan Heagney home"><img src="/images/rh-logo-white.png" alt="" width="32" height="24"><span class="brand-text"><span class="brand-name">Ryan Heagney</span><span class="brand-sub">Legacy Equity Partners</span></span></a>
     <a href="#apply" class="btn btn-primary btn-sm"><span class="btn-label">Apply Now</span></a>
   </div>
 </header>
 
 <main>
 
-<!-- ============ 1. HERO ============ -->
+<!-- ============ HERO — video first ============ -->
 <section class="hero" id="top">
   <div class="wrap">
-    <div class="hero-copy">
-      <div class="badge reveal"><span class="dot"></span>Now building the Legacy team</div>
-      <h1 class="h-display reveal-mask">
-        <span class="line"><span>Build a career</span></span>
-        <span class="line"><span>that builds</span></span>
-        <span class="line"><span class="accent">legacies.</span></span>
-      </h1>
-      <p class="lead reveal d2">Learn the business of protecting families — with real mentorship, proven systems, and a team that actually shows up for you.</p>
-      <div class="hero-ctas reveal d3">
-        <a href="#apply" class="btn btn-primary btn-lg"><span class="btn-label">See If You Qualify</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-        <a href="#video" class="btn btn-ghost btn-lg"><span class="btn-label">Watch the Overview</span></a>
-      </div>
-      <div class="hero-note reveal d4">
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Takes about 2 minutes</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>No experience required to apply</span>
-      </div>
-    </div>
-    <div class="hero-visual reveal d2">
-      <div class="ring" aria-hidden="true"></div>
-      <img class="portrait" src="/images/ryan-cutout.webp" alt="Ryan Heagney" width="887" height="724" fetchpriority="high">
-      <div class="id-card">
-        <img src="/images/rh-logo-white.png" alt="" width="34" height="26">
-        <div><strong>Ryan Heagney</strong><span>Legacy Equity Partners · NPN 21357233</span></div>
-      </div>
-    </div>
-  </div>
-</section>
+    <h1 class="h-display reveal-mask">
+      <span class="line"><span>Build a career</span></span>
+      <span class="line"><span>that builds <span class="grad-text">legacies.</span></span></span>
+    </h1>
+    <p class="lead reveal d2">Ryan Heagney is building a team of coachable people to protect families across the country. Watch the overview, then see if you qualify.</p>
 
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Mentorship</span><span>Proven Systems</span><span>Licensing Guidance</span><span>Flexibility</span><span>Real Team</span><span>Protect Families</span>
-    <span>Mentorship</span><span>Proven Systems</span><span>Licensing Guidance</span><span>Flexibility</span><span>Real Team</span><span>Protect Families</span>
-  </div>
-</div>
-
-<!-- ============ 2. VIDEO / VSL ============ -->
-<section id="video">
-  <div class="wrap">
-    <div class="section-head center">
-      <div class="eyebrow reveal">The Opportunity</div>
-      <h2 class="h-section reveal-mask"><span class="line"><span>See it from</span></span><span class="line"><span>the <span class="accent">inside.</span></span></span></h2>
-      <p class="lead reveal d2">Ryan walks through what the team does, how you'd be trained, and what it takes to succeed — straight, no hype.</p>
-    </div>
-    <div class="video-frame reveal d2">
-      <!-- [REPLACE] Set window.FUNNEL.vslUrl in the <head> and this poster becomes the player -->
-      <div class="video-poster" role="button" tabindex="0" data-video="vslUrl" aria-label="Play the recruitment video">
-        <img class="poster-img" src="/images/ryan-cutout.webp" alt="" loading="lazy" width="887" height="724">
-        <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span>
-        <div class="poster-copy"><strong>Building the<br>Legacy team</strong><span data-video-status>A message from Ryan</span></div>
-      </div>
-    </div>
-    <div class="video-cta reveal">
-      <a href="#apply" class="btn btn-primary btn-lg"><span class="btn-label">Start Your Application</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      <p>Watched it and still curious? That's exactly who should apply.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 3. WHY JOIN ============ -->
-<section id="why">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow reveal">Why Join</div>
-      <h2 class="h-section reveal-mask"><span class="line"><span>Everything you need</span></span><span class="line"><span class="outline-text">to grow.</span></span></h2>
-    </div>
-    <div class="cards">
-<article class="card reveal d1">
-  <div class="card-top"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></div><span class="card-num">01</span></div>
-  <h3>Mentorship From Day One</h3><p>You won't be handed a login and left alone. You'll learn the business directly from Ryan and the team.</p>
-</article>
-<article class="card reveal d2">
-  <div class="card-top"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div><span class="card-num">02</span></div>
-  <h3>Licensing Guidance</h3><p>Not licensed yet? We'll walk you through the path to getting licensed in your state.</p>
-</article>
-<article class="card reveal d3">
-  <div class="card-top"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></div><span class="card-num">03</span></div>
-  <h3>Proven Systems</h3><p>Scripts, processes, and tools that are already working — so you can focus on helping people.</p>
-</article>
-<article class="card reveal d1">
-  <div class="card-top"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><span class="card-num">04</span></div>
-  <h3>Flexible Structure</h3><p>Start where you are. Build your schedule around your life, not the other way around.</p>
-</article>
-<article class="card reveal d2">
-  <div class="card-top"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><span class="card-num">05</span></div>
-  <h3>A Team That Shows Up</h3><p>Weekly trainings, accountability, and people in your corner who want to see you win.</p>
-</article>
-<article class="card reveal d3">
-  <div class="card-top"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div><span class="card-num">06</span></div>
-  <h3>Work That Matters</h3><p>Every client you help is a family that's protected. That's a legacy worth building.</p>
-</article>
-    </div>
-    <div class="fit">
-      <div class="fit-col fit-yes reveal">
-        <h3>This is for you if</h3>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>You want to build something long-term, not chase a quick win</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>You're coachable and willing to learn a new skill</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>You care about people and want work that means something</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>You're ready to put in consistent effort</li>
-        </ul>
-      </div>
-      <div class="fit-col fit-no reveal d2">
-        <h3>It's not a fit if</h3>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>You're looking for something with zero effort</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>You don't want feedback or accountability</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>You'd pressure people into things they don't need</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 4. SOCIAL PROOF ============ -->
-<section id="proof">
-  <div class="wrap">
-    <div class="meet">
-      <div class="meet-photo reveal">
-        <span class="tag">Meet Ryan</span>
-        <img src="/images/ryan-cutout.webp" alt="Ryan Heagney" loading="lazy" width="887" height="724">
-      </div>
-      <div class="meet-copy">
-        <div class="eyebrow reveal">Who You'd Work With</div>
-        <h2 class="h-section reveal-mask" style="margin:18px 0 24px;"><span class="line"><span>Ryan</span></span><span class="line"><span class="accent">Heagney</span></span></h2>
-        <p class="reveal">Ryan is a licensed insurance professional and the face of Legacy Equity Partners in Scottsdale, Arizona. His approach is simple: educate instead of pressure, and build real relationships with every family he helps.</p>
-        <p class="reveal d1">Now he's building a team that works the same way — and he's personally invested in the people who join it. <!-- [REPLACE] Add 1–2 lines of Ryan's own story/why in his words --></p>
-        <blockquote class="reveal d2">“I don't sell policies. I build strategies that protect families.”</blockquote>
-        <div class="meet-facts reveal d3">
-          <span>Scottsdale, AZ</span><span>Licensed · NPN 21357233</span><span>Legacy Equity Partners</span>
+    <div class="step-label reveal d3"><span class="n">1</span>Watch the video start to finish</div>
+    <div class="video-wrap reveal d3">
+      <div class="video-frame">
+        <!-- [REPLACE] set window.FUNNEL.vslUrl and this becomes the player -->
+        <div class="video-poster" role="button" tabindex="0" data-video="vslUrl" aria-label="Play the overview video">
+          <img class="poster-img" src="/images/ryan-cutout.webp" alt="" width="887" height="724" fetchpriority="high">
+          <span class="chip chip-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0L14.06 8.5A2 2 0 0 0 15.5 9.94l6.14 1.58a.5.5 0 0 1 0 .96L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"/></svg><span data-video-status>A message from Ryan</span></span>
+          <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span>
+          <span class="chip chip-sound"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4.7a.7.7 0 0 0-1.2-.5L6.4 7.6A1.4 1.4 0 0 1 5.4 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.4a1.4 1.4 0 0 1 1 .4l3.4 3.4a.7.7 0 0 0 1.2-.5z"/><path d="m22 9-6 6"/><path d="m16 9 6 6"/></svg>Tap for sound</span>
         </div>
       </div>
     </div>
 
-    <div class="rail-head">
-      <div>
-        <div class="eyebrow reveal">From the Team</div>
-        <h2 class="h-section reveal-mask" style="margin-top:16px;"><span class="line"><span>Real people.</span></span><span class="line"><span class="outline-text">Real stories.</span></span></h2>
-      </div>
-      <div class="rail-btns">
-        <button type="button" data-rail="prev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
-        <button type="button" data-rail="next" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
-      </div>
+    <div class="hero-cta reveal d4">
+      <div class="step-label" style="margin:0"><span class="n">2</span>See if you qualify</div>
+      <a href="#apply" class="btn btn-primary btn-lg"><span class="btn-label">Start My Application</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <div class="small"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>About 2 minutes</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>No experience required to apply</span></div>
     </div>
-    <!-- [REPLACE] Placeholders only. Never publish invented testimonials, income, or results. -->
-    <div class="rail reveal">
-<figure class="t-card">
-  <div class="q">&ldquo;</div>
-  <blockquote><p>[Real team testimonial goes here — what joining the team has meant for them, in their own words. Do not publish until approved by the team member.]</p></blockquote>
-  <figcaption class="t-who"><span class="t-avatar">A</span><span><strong>[Team member name]</strong><span>[Role · time on team]</span><br><span class="ph">Placeholder</span></span></figcaption>
-</figure>
-<div class="t-card t-video" role="button" tabindex="0" data-video="testimonialVideo1" aria-label="Play team video story">
-  <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span>
-  <div class="t-video-copy"><strong>[Video story — team member]</strong><span class="ph" data-video-status>Placeholder · add video URL in config</span></div>
-</div>
-<figure class="t-card">
-  <div class="q">&ldquo;</div>
-  <blockquote><p>[Real team testimonial goes here — what joining the team has meant for them, in their own words. Do not publish until approved by the team member.]</p></blockquote>
-  <figcaption class="t-who"><span class="t-avatar">B</span><span><strong>[Team member name]</strong><span>[Role · time on team]</span><br><span class="ph">Placeholder</span></span></figcaption>
-</figure>
-<figure class="t-card">
-  <div class="q">&ldquo;</div>
-  <blockquote><p>[Real team testimonial goes here — what joining the team has meant for them, in their own words. Do not publish until approved by the team member.]</p></blockquote>
-  <figcaption class="t-who"><span class="t-avatar">C</span><span><strong>[Team member name]</strong><span>[Role · time on team]</span><br><span class="ph">Placeholder</span></span></figcaption>
-</figure>
-<figure class="t-card">
-  <div class="q">&ldquo;</div>
-  <blockquote><p>[Real team testimonial goes here — what joining the team has meant for them, in their own words. Do not publish until approved by the team member.]</p></blockquote>
-  <figcaption class="t-who"><span class="t-avatar">D</span><span><strong>[Team member name]</strong><span>[Role · time on team]</span><br><span class="ph">Placeholder</span></span></figcaption>
-</figure>
+
+    <div class="carriers reveal">
+      <p>Carrier partners</p>
+      <div class="carrier-row" id="carrierRow"></div>
     </div>
   </div>
 </section>
 
-<!-- ============ 5. APPLICATION ============ -->
+<!-- ============ APPLICATION ============ -->
 <section id="apply">
   <div class="wrap">
     <div class="section-head center">
-      <div class="eyebrow reveal">Apply</div>
-      <h2 class="h-section reveal-mask"><span class="line"><span>See if you</span></span><span class="line"><span class="accent">qualify.</span></span></h2>
-      <p class="lead reveal d2">A few quick questions. Takes about 2 minutes — then you'll book a short interview with Ryan.</p>
+      <div class="eyebrow reveal">Step 2</div>
+      <h2 class="h-section reveal-mask"><span class="line"><span>See if you</span></span><span class="line"><span class="grad-text">qualify.</span></span></h2>
+      <p class="lead reveal d2">Seven quick questions, one at a time. Then you'll book a short interview with Ryan.</p>
     </div>
 
     <form class="apply-shell reveal d2" id="applyForm" novalidate>
@@ -251,25 +119,20 @@ window.FUNNEL = {
         <div class="apply-meta"><span>Application</span><strong id="applyStep" aria-live="polite">1 / 7</strong></div>
         <div class="bar" role="progressbar" aria-label="Application progress"><i id="applyBar"></i></div>
       </div>
-
       <div class="apply-body">
         <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
 
         <div class="step" data-type="name">
-          <h3>Let's start with your name.</h3>
-          <p class="hint">So Ryan knows who he's talking to.</p>
+          <h3>Let's start with your name.</h3><p class="hint">So Ryan knows who he's talking to.</p>
           <div class="row-2">
             <div class="field"><label for="firstName">First name</label><input class="input" id="firstName" name="firstName" autocomplete="given-name" placeholder="First name"></div>
             <div class="field"><label for="lastName">Last name</label><input class="input" id="lastName" name="lastName" autocomplete="family-name" placeholder="Last name"></div>
-          </div>
-          <div class="error-msg" role="alert"></div>
+          </div><div class="error-msg" role="alert"></div>
         </div>
 
         <div class="step" data-type="select" data-name="state">
-          <h3>Where are you located?</h3>
-          <p class="hint">Licensing works state by state, so this helps us guide you.</p>
-          <div class="field"><label for="state">State</label>
-            <select class="select" id="state" name="state" autocomplete="address-level1"><option value="">Select your state</option>
+          <h3>Where are you located?</h3><p class="hint">Licensing works state by state.</p>
+          <div class="field"><label for="state">State</label><select class="select" id="state" name="state" autocomplete="address-level1"><option value="">Select your state</option>
 <option>Alabama</option>
 <option>Alaska</option>
 <option>Arizona</option>
@@ -322,13 +185,11 @@ window.FUNNEL = {
 <option>Wisconsin</option>
 <option>Wyoming</option>
 <option>Outside the US</option>
-            </select></div>
-          <div class="error-msg" role="alert"></div>
+          </select></div><div class="error-msg" role="alert"></div>
         </div>
 
         <div class="step" data-type="choice">
-          <h3>Are you currently licensed?</h3>
-          <p class="hint">No license is completely fine — many people start here.</p>
+          <h3>Are you currently licensed?</h3><p class="hint">No license is completely fine — many people start here.</p>
 <div class="options" role="radiogroup" data-name="licensed">
 <button type="button" class="opt" role="radio" aria-checked="false" data-value="licensed"><span class="key">A</span><span>Yes, I have a life/health license</span></button>
 <button type="button" class="opt" role="radio" aria-checked="false" data-value="in-progress"><span class="key">B</span><span>I'm working on it<span class="opt-sub">Studying or scheduled for the exam</span></span></button>
@@ -338,8 +199,7 @@ window.FUNNEL = {
         </div>
 
         <div class="step" data-type="choice">
-          <h3>What best describes where you are right now?</h3>
-          <p class="hint">No wrong answers.</p>
+          <h3>Where are you at right now?</h3><p class="hint">No wrong answers.</p>
 <div class="options two" role="radiogroup" data-name="situation">
 <button type="button" class="opt" role="radio" aria-checked="false" data-value="employed-ft"><span class="key">A</span><span>Working full-time</span></button>
 <button type="button" class="opt" role="radio" aria-checked="false" data-value="employed-pt"><span class="key">B</span><span>Working part-time</span></button>
@@ -350,8 +210,7 @@ window.FUNNEL = {
         </div>
 
         <div class="step" data-type="choice">
-          <h3>How much time could you commit?</h3>
-          <p class="hint">Be honest — we'll match the path to your reality.</p>
+          <h3>How much time could you commit?</h3><p class="hint">Be honest — we'll match the path to your reality.</p>
 <div class="options" role="radiogroup" data-name="commitment">
 <button type="button" class="opt" role="radio" aria-checked="false" data-value="full-time"><span class="key">A</span><span>Full-time<span class="opt-sub">Ready to make this my main focus</span></span></button>
 <button type="button" class="opt" role="radio" aria-checked="false" data-value="part-time"><span class="key">B</span><span>Part-time to start<span class="opt-sub">Building alongside what I do now</span></span></button>
@@ -361,29 +220,23 @@ window.FUNNEL = {
         </div>
 
         <div class="step" data-type="text">
-          <h3>Why does this interest you?</h3>
-          <p class="hint">A sentence or two. What made you click Apply?</p>
-          <div class="field"><label for="whyText" class="sr-only">Why are you interested?</label>
-            <textarea class="textarea" id="whyText" name="why" maxlength="600" placeholder="I'm interested because…"></textarea>
-            <div class="counter" id="whyCount">0 / 600</div></div>
+          <h3>Why does this interest you?</h3><p class="hint">A sentence or two. What made you click apply?</p>
+          <div class="field"><label for="whyText" class="sr-only">Why are you interested?</label><textarea class="textarea" id="whyText" name="why" maxlength="600" placeholder="I'm interested because…"></textarea><div class="counter" id="whyCount">0 / 600</div></div>
           <div class="error-msg" role="alert"></div>
         </div>
 
         <div class="step" data-type="contact">
-          <h3>Where can Ryan reach you?</h3>
-          <p class="hint">Last step. We'll use this to set up your interview.</p>
+          <h3>Where can Ryan reach you?</h3><p class="hint">Last step. We'll use this to set up your interview.</p>
           <div class="field"><label for="email">Email</label><input class="input" id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com"></div>
           <div class="field"><label for="phone">Mobile phone</label><input class="input" id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(555) 555-5555"></div>
           <div class="consent">
             <label class="check"><input type="checkbox" name="consentContact"><span>I agree to be contacted by Ryan Heagney / Legacy Equity Partners by phone and email about my application and this opportunity. See our <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms" target="_blank" rel="noopener">Terms</a>.</span></label>
             <label class="check"><input type="checkbox" name="consentSms"><span>Optional: I agree to receive text messages from Ryan Heagney / Legacy Equity Partners about my application, interview scheduling, and reminders. Message and data rates may apply. Message frequency varies. Reply STOP to opt out, HELP for help. Consent is not a condition of applying.</span></label>
-          </div>
-          <div class="error-msg" role="alert"></div>
+          </div><div class="error-msg" role="alert"></div>
         </div>
       </div>
 
       <div class="notice" id="applyNotice" role="alert" hidden></div>
-
       <div class="apply-nav">
         <button type="button" class="back" id="applyBack" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>Back</button>
         <span class="enter-hint">Press <kbd>Enter</kbd> ↵</span>
@@ -393,66 +246,217 @@ window.FUNNEL = {
       <div class="done" id="applyDone" aria-live="polite">
         <div class="done-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
         <h3>You're in, <span id="doneName"></span>.</h3>
-        <p>Your application was received. The next step is a short interview with Ryan — grab a time that works for you.</p>
-        <a class="btn btn-primary btn-lg" id="bookInterview" href="#" target="_blank" rel="noopener"><span class="btn-label">Book Your Interview</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-        <ol class="next-steps">
-          <li><b>1</b>Book your interview time</li>
-          <li><b>2</b>Watch for a confirmation by email</li>
-          <li><b>3</b>Meet Ryan and get your questions answered</li>
-        </ol>
+        <p>Your application was received. Next step: grab a spot for your interview with Ryan.</p>
+        <a class="btn btn-primary btn-lg" id="bookInterview" href="#" target="_blank" rel="noopener"><span class="btn-label">Book My Interview</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <ol class="next-steps"><li><b>1</b>Book your interview time</li><li><b>2</b>Watch for a confirmation by email</li><li><b>3</b>Meet Ryan and get your questions answered</li></ol>
       </div>
     </form>
+    <div class="apply-assure reveal"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Your information stays private</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>About 2 minutes</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>No obligation</span></div>
+  </div>
+</section>
 
-    <div class="apply-assure reveal">
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Your information stays private</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>About 2 minutes</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>No obligation</span>
+<!-- ============ MEET RYAN ============ -->
+<section id="ryan">
+  <div class="wrap meet">
+    <div class="meet-photo reveal"><span class="tag">Meet Ryan</span><img src="/images/ryan-cutout.webp" alt="Ryan Heagney" loading="lazy" width="887" height="724"></div>
+    <div class="meet-copy">
+      <div class="eyebrow reveal">Who you'd work with</div>
+      <h2 class="h-section reveal-mask" style="margin:18px 0 24px"><span class="line"><span>Ryan</span></span><span class="line"><span class="grad-text">Heagney</span></span></h2>
+      <p class="reveal">Ryan is a licensed insurance professional and the face of Legacy Equity Partners in Scottsdale, Arizona. His approach is simple: educate instead of pressure, and build real relationships with every family he helps.</p>
+      <p class="reveal d1">Now he's building a team that works the same way — and he's personally invested in every person who joins it. <!-- [REPLACE] 1–2 lines of Ryan's story in his words --></p>
+      <blockquote class="reveal d2">“I don't sell policies. I build strategies that protect families.”</blockquote>
+      <div class="pills reveal d3"><span>Scottsdale, AZ</span><span>Licensed · NPN 21357233</span><span>Legacy Equity Partners</span></div>
     </div>
   </div>
 </section>
 
-<!-- ============ 6. FINAL CTA ============ -->
+<!-- ============ TEAM PRODUCTION ============ -->
+<section id="production">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow reveal">Proof over promises</div>
+      <h2 class="h-section reveal-mask"><span class="line"><span>A team that's</span></span><span class="line"><span class="grad-text">growing.</span></span></h2>
+    </div>
+    <div class="panel chart-card reveal d2">
+      <div class="chart-head">
+        <div><h3>Team Production</h3><p>Monthly submitted premium · Legacy Equity Partners</p></div>
+        <div class="chart-kpis">
+          <div class="kpi"><div class="v grad-text" id="kpiTotal">$0K</div><div class="k">Latest month</div></div>
+          <div class="kpi"><div class="v up" id="kpiGrowth">+0%</div><div class="k">Growth</div></div>
+        </div>
+      </div>
+      <div class="chart-body" id="prodChart"><div class="chart-tip" id="chartTip"></div></div>
+      <div class="chart-foot"><span class="legend"><span><i></i>Team production</span></span><span class="sample-tag" data-sample="production">Sample data</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INCOME ============ -->
+<section id="income">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow reveal">Your path, your choice</div>
+      <h2 class="h-section reveal-mask"><span class="line"><span>Build it at</span></span><span class="line"><span class="grad-text">your pace.</span></span></h2>
+      <p class="lead reveal d2">See what different commitment levels can look like. Pick a path.</p>
+    </div>
+    <div class="center reveal d2" style="text-align:center"><div class="tabs" role="tablist"><span class="pill" aria-hidden="true"></span></div></div>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="ringGrad" x1="0" x2="1"><stop offset="0" stop-color="#FF6A1A"/><stop offset="1" stop-color="#FFE3CC"/></linearGradient></defs></svg>
+    <div class="income-grid reveal d3">
+      <div class="panel income-hero lift spot">
+        <div class="k">Potential annual income</div>
+        <div class="big"><span class="odo" data-f="annual">$0</span></div>
+        <div class="sub" data-f="blurb"></div>
+        <div class="hours" data-f="hours"></div>
+      </div>
+      <div class="stat-row">
+        <div class="panel stat lift spot"><div class="v"><span class="odo" data-f="monthly">$0</span></div><div class="k">Monthly income</div></div>
+        <div class="panel stat lift spot"><div class="v"><span class="odo" data-f="policies">0</span></div><div class="k">Policies / month</div></div>
+        <div class="panel stat lift spot"><div class="v" data-f="first">—</div><div class="k">Time to first sale</div></div>
+        <div class="panel stat lift spot"><div class="v" style="font-size:clamp(22px,3vw,28px)" data-f="rate">—</div><div class="k">Contract level</div></div>
+      </div>
+    </div>
+    <p class="disclaim reveal"><span class="sample-tag" data-sample="income" style="margin-right:8px">Sample data</span>Illustrative examples only — not typical, average, or guaranteed results. Income depends on your effort, licensing, contract level, and many other factors. Ryan will walk you through the actual compensation structure on your interview.</p>
+  </div>
+</section>
+
+<!-- ============ WHY JOIN ============ -->
+<section id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow reveal">Why join</div>
+      <h2 class="h-section reveal-mask"><span class="line"><span>Everything you need</span></span><span class="line"><span class="outline-text">to grow.</span></span></h2>
+    </div>
+    <div class="cards">
+<article class="panel card lift spot reveal d1">
+  <div class="card-top"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></div><span class="card-num">01</span></div>
+  <h3>Mentorship From Day One</h3><p>You learn the business directly from Ryan and the team — not from a PDF.</p></article>
+<article class="panel card lift spot reveal d2">
+  <div class="card-top"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div><span class="card-num">02</span></div>
+  <h3>Licensing Guidance</h3><p>Not licensed yet? We walk you through the exact path for your state.</p></article>
+<article class="panel card lift spot reveal d3">
+  <div class="card-top"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></div><span class="card-num">03</span></div>
+  <h3>Proven Systems</h3><p>Scripts, processes, and tools that already work, so you can focus on people.</p></article>
+<article class="panel card lift spot reveal d1">
+  <div class="card-top"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><span class="card-num">04</span></div>
+  <h3>Flexible Structure</h3><p>Start part-time or go all in. Build it around your life.</p></article>
+<article class="panel card lift spot reveal d2">
+  <div class="card-top"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><span class="card-num">05</span></div>
+  <h3>A Team That Shows Up</h3><p>Trainings, accountability, and people in your corner who want you to win.</p></article>
+<article class="panel card lift spot reveal d3">
+  <div class="card-top"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div><span class="card-num">06</span></div>
+  <h3>Work That Matters</h3><p>Every client you help is a family that's protected. That's the legacy.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS — phone motion graphic ============ -->
+<section id="process">
+  <div class="wrap process">
+    <div class="phone-stage reveal" id="phoneStage">
+      <div class="halo"></div><div class="orbit"></div>
+      <div class="phone"><div class="phone-screen">
+        <div class="p-status"><span>9:41</span><span>LTE</span></div><div class="p-island"></div>
+        <div class="p-app"><img src="/images/rh-logo-white.png" alt=""><div><strong>Legacy Team</strong><span>Your career pathway</span></div></div>
+        <div class="p-progress"><i></i></div>
+        <div class="p-step"><span class="p-num"><b>1</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><div><strong>Apply &amp; book your interview</strong><span>Two minutes, then pick a time with Ryan.</span></div></div>
+        <div class="p-step"><span class="p-num"><b>2</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><div><strong>Get licensed &amp; trained</strong><span>We guide you through your state's process.</span></div></div>
+        <div class="p-step"><span class="p-num"><b>3</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><div><strong>Launch your career</strong><span>Start helping families with the team behind you.</span></div></div>
+        <div class="p-toast"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0L14.06 8.5A2 2 0 0 0 15.5 9.94l6.14 1.58a.5.5 0 0 1 0 .96L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"/></svg></span><div><b>Welcome to the team</b><span>Your first family is protected.</span></div></div>
+        <span class="p-cursor" style="opacity:0;left:50%;top:60%"></span>
+      </div></div>
+    </div>
+    <div>
+      <div class="section-head" style="margin-bottom:32px">
+        <div class="eyebrow reveal">Step by step</div>
+        <h2 class="h-section reveal-mask"><span class="line"><span>How the</span></span><span class="line"><span class="grad-text">process works.</span></span></h2>
+      </div>
+      <ol class="steps-list">
+        <li class="s-item reveal"><span class="s-num">1</span><div><h3>Apply &amp; book</h3><p>Answer a few questions, then book a short interview with Ryan.</p></div><span class="s-bar"></span></li>
+        <li class="s-item reveal d1"><span class="s-num">2</span><div><h3>License &amp; train</h3><p>If it's a fit, we guide you through licensing and hands-on training.</p></div><span class="s-bar"></span></li>
+        <li class="s-item reveal d2"><span class="s-num">3</span><div><h3>Launch</h3><p>Start helping families while building your income and client base.</p></div><span class="s-bar"></span></li>
+      </ol>
+      <a href="#apply" class="btn btn-primary btn-lg reveal d3" style="margin-top:28px"><span class="btn-label">Start Step 1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM STORIES ============ -->
+<section id="stories">
+  <div class="wrap">
+    <div class="rail-head">
+      <div><div class="eyebrow reveal">From the team</div><h2 class="h-section reveal-mask" style="margin-top:16px"><span class="line"><span>Real people.</span></span><span class="line"><span class="outline-text">Real stories.</span></span></h2></div>
+      <div class="rail-btns"><button type="button" data-rail="prev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><button type="button" data-rail="next" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></div>
+    </div>
+    <!-- [REPLACE] Placeholders only. Never publish invented testimonials, income, or results. -->
+    <div class="rail reveal">
+<figure class="panel t-card lift">
+  <div class="q grad-text">&ldquo;</div>
+  <blockquote><p>[Real team member quote — what joining Ryan's team has meant to them, in their own words. Publish only with their approval.]</p></blockquote>
+  <figcaption class="t-who"><span class="t-avatar">A</span><span><strong>[Team member]</strong><span>[Role · time on team]</span><br><span class="ph">Placeholder</span></span></figcaption></figure>
+<div class="panel t-card t-video lift" role="button" tabindex="0" data-video="testimonialVideo1" aria-label="Play team video story">
+  <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg></span>
+  <div class="t-video-copy"><strong>[Team video story]</strong><span class="ph" data-video-status>Placeholder · add URL in config</span></div></div>
+<figure class="panel t-card lift">
+  <div class="q grad-text">&ldquo;</div>
+  <blockquote><p>[Real team member quote — what joining Ryan's team has meant to them, in their own words. Publish only with their approval.]</p></blockquote>
+  <figcaption class="t-who"><span class="t-avatar">B</span><span><strong>[Team member]</strong><span>[Role · time on team]</span><br><span class="ph">Placeholder</span></span></figcaption></figure>
+<figure class="panel t-card lift">
+  <div class="q grad-text">&ldquo;</div>
+  <blockquote><p>[Real team member quote — what joining Ryan's team has meant to them, in their own words. Publish only with their approval.]</p></blockquote>
+  <figcaption class="t-who"><span class="t-avatar">C</span><span><strong>[Team member]</strong><span>[Role · time on team]</span><br><span class="ph">Placeholder</span></span></figcaption></figure>
+<figure class="panel t-card lift">
+  <div class="q grad-text">&ldquo;</div>
+  <blockquote><p>[Real team member quote — what joining Ryan's team has meant to them, in their own words. Publish only with their approval.]</p></blockquote>
+  <figcaption class="t-who"><span class="t-avatar">D</span><span><strong>[Team member]</strong><span>[Role · time on team]</span><br><span class="ph">Placeholder</span></span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head center"><div class="eyebrow reveal">Questions</div><h2 class="h-section reveal-mask"><span class="line"><span>Straight</span></span><span class="line"><span class="grad-text">answers.</span></span></h2></div>
+    <!-- [CONFIRM WITH RYAN] comp structure, lead program, and licensing fees before launch -->
+    <div class="faq">
+<div class="panel faq-item reveal"><button type="button" class="faq-q" aria-expanded="false">Does it cost anything to apply?<span class="ic" aria-hidden="true"></span></button><div class="faq-a"><div><p>No. Applying and interviewing are free. Getting licensed involves state course and exam fees — we'll walk you through exactly what they are for your state before you commit to anything.</p></div></div></div>
+<div class="panel faq-item reveal"><button type="button" class="faq-q" aria-expanded="false">Is this a salaried job?<span class="ic" aria-hidden="true"></span></button><div class="faq-a"><div><p>No. This is an independent, commission-based role. Ryan explains exactly how compensation works on your interview so you can decide with clear eyes.</p></div></div></div>
+<div class="panel faq-item reveal"><button type="button" class="faq-q" aria-expanded="false">Do I need sales or insurance experience?<span class="ic" aria-hidden="true"></span></button><div class="faq-a"><div><p>No. Many people on the team started with zero experience. What matters is being coachable and consistent.</p></div></div></div>
+<div class="panel faq-item reveal"><button type="button" class="faq-q" aria-expanded="false">Can I start part-time?<span class="ic" aria-hidden="true"></span></button><div class="faq-a"><div><p>Yes. Plenty of people start part-time alongside what they do now and grow from there.</p></div></div></div>
+<div class="panel faq-item reveal"><button type="button" class="faq-q" aria-expanded="false">How long does licensing take?<span class="ic" aria-hidden="true"></span></button><div class="faq-a"><div><p>It varies by state. Many people complete pre-licensing and pass the exam within a few weeks, and we guide you the whole way.</p></div></div></div>
+<div class="panel faq-item reveal"><button type="button" class="faq-q" aria-expanded="false">Do I have to sell to friends and family?<span class="ic" aria-hidden="true"></span></button><div class="faq-a"><div><p>No. You'll be trained on how the team connects with families who are actively looking for coverage.</p></div></div></div>
+<div class="panel faq-item reveal"><button type="button" class="faq-q" aria-expanded="false">What kind of income can I expect?<span class="ic" aria-hidden="true"></span></button><div class="faq-a"><div><p>It depends on your effort, your licensing, and the time you put in. Results vary and nothing is guaranteed — Ryan will walk you through the real comp structure on your interview.</p></div></div></div>
+<div class="panel faq-item reveal"><button type="button" class="faq-q" aria-expanded="false">What happens after I apply?<span class="ic" aria-hidden="true"></span></button><div class="faq-a"><div><p>You'll pick a time for a short interview with Ryan. If it's a fit for both sides, we map out your licensing and training plan.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
 <section class="final">
   <div class="wrap">
-    <div class="eyebrow reveal" style="justify-content:center;">Your Move</div>
-    <h2 class="h-display reveal-mask"><span class="line"><span>Your legacy</span></span><span class="line"><span class="accent">starts here.</span></span></h2>
-    <p class="lead reveal d2">The best time to start building something that lasts was years ago. The second best time is today.</p>
+    <div class="eyebrow reveal" style="justify-content:center">Your move</div>
+    <h2 class="h-display reveal-mask"><span class="line"><span>Your legacy</span></span><span class="line"><span class="grad-text">starts here.</span></span></h2>
+    <p class="lead reveal d2">Two minutes to apply. One conversation with Ryan. See if it's right for you.</p>
     <a href="#apply" class="btn btn-primary btn-lg reveal d3"><span class="btn-label">Apply Now</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
   </div>
 </section>
-
 </main>
 
-<!-- ============ 7. FOOTER ============ -->
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-grid">
-      <div>
-        <a class="brand" href="/"><img src="/images/rh-logo-white.png" alt="" width="34" height="26"><span class="brand-text"><span class="brand-name">Ryan Heagney</span><span class="brand-sub">Legacy Equity Partners</span></span></a>
-        <p>Building a team that protects families the right way.</p>
-      </div>
-      <div class="footer-contact">
-        <a href="tel:+17542286687">(754) 228-6687</a>
-        <a href="mailto:ryanheagney@ryanheagneyllc.com">ryanheagney@ryanheagneyllc.com</a>
-        <span>7171 E Paradise Lane, Scottsdale, AZ 85254</span>
-      </div>
-      <div class="footer-links">
-        <a href="/insurance">Looking for coverage?</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms</a>
-      </div>
+      <div><a class="brand" href="/"><img src="/images/rh-logo-white.png" alt="" width="32" height="24"><span class="brand-text"><span class="brand-name">Ryan Heagney</span><span class="brand-sub">Legacy Equity Partners</span></span></a><p>Building a team that protects families the right way.</p></div>
+      <div class="footer-contact"><a href="tel:+17542286687">(754) 228-6687</a><a href="mailto:ryanheagney@ryanheagneyllc.com">ryanheagney@ryanheagneyllc.com</a><span>7171 E Paradise Lane, Scottsdale, AZ 85254</span></div>
+      <div class="footer-links"><a href="/insurance">Looking for coverage?</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms</a></div>
     </div>
-    <div class="footer-legal">
-      &copy; <span id="year">2026</span> Ryan Heagney / Legacy Equity Partners. All rights reserved. Ryan Heagney is a licensed insurance professional, NPN 21357233.
-      This page describes an independent business opportunity and is not an offer of employment. No specific income or results are guaranteed; individual results vary based on effort, licensing, and other factors. Insurance licensing is required to sell insurance products.
-      <!-- [REPLACE] Add any IMO / upline compliance language required for recruiting materials -->
-    </div>
+    <div class="footer-legal">&copy; <span id="year">2026</span> Ryan Heagney / Legacy Equity Partners. All rights reserved. Ryan Heagney is a licensed insurance professional, NPN 21357233. This page describes an independent, commission-based opportunity and is not an offer of employment. No income, leads, or results are guaranteed; any figures shown are illustrative and not typical. Results depend on individual effort, licensing, and other factors. Insurance licensing is required to sell insurance products. Not affiliated with or endorsed by Meta, Instagram, TikTok, or any carrier unless stated.
+    <!-- [REPLACE] add any IMO / upline compliance language required for recruiting --></div>
   </div>
 </footer>
 
 <div class="sticky-cta"><a href="#apply" class="btn btn-primary btn-lg"><span class="btn-label">Apply Now — 2 Min</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
 
 <script src="/motion.js" defer></script>
+<script src="/fx.js" defer></script>
 <script src="/apply.js" defer></script>
 </body>
 </html>

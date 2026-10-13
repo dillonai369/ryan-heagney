@@ -1,22 +1,20 @@
-# Ryan Heagney — Recruitment Funnel · Backend Notes
+# Ryan Heagney — Recruitment Funnel v2 · Backend Notes
 
 ## Structure (Studio Seven build system)
-- `index.html` — recruitment funnel (homepage). All editable settings live in the `window.FUNNEL` config block in `<head>`.
-- `insurance.html` — previous client-facing insurance homepage, served at `/insurance`.
-- `privacy.html`, `terms.html` — legal pages (needed for A2P/SMS). Make sure they also cover recruiting applicant data.
-- `styles.css` + `motion.js` — shared design/motion layer. `apply.js` — multi-step application.
-- `api/apply.js` — Vercel serverless function. Validates and forwards applications to GoHighLevel.
-- `images/` — real image files (no base64).
+- `index.html` — video-first recruitment funnel. ALL editable content/data lives in `window.FUNNEL` in `<head>`.
+- `styles.css` design system · `motion.js` reveals/embers/FAQ/video · `fx.js` motion graphics (production chart, income odometers, phone process) · `apply.js` multi-step application.
+- `api/apply.js` — Vercel function, saves applicants to Supabase.
+- `supabase/schema.sql` — run once to create the `applicants` table (RLS on, server-only access).
+- `insurance.html` — old client-facing site at `/insurance`.
 
-## Connecting GoHighLevel (choose one)
-A) Workflow with an **Inbound Webhook** trigger → copy URL →
-   `vercel env add GHL_WEBHOOK_URL production` (and `preview`)
-B) Settings → Private Integrations → create token with `contacts.write` →
-   `vercel env add GHL_API_TOKEN production` and `vercel env add GHL_LOCATION_ID production`
-Redeploy after adding env vars.
+## Connect Supabase
+1. Supabase → New project (or existing) → SQL Editor → paste `supabase/schema.sql` → Run.
+2. Project Settings → API → copy Project URL and the `service_role` key.
+3. `vercel env add SUPABASE_URL` and `vercel env add SUPABASE_SERVICE_ROLE_KEY` (Production + Preview), then `vercel --prod`.
 
-Applicants are tagged `recruit-applicant`, `source-recruit-funnel` (+ `recruit-licensed`, `sms-opt-in` when applicable).
-Answers + UTM/ad attribution are attached as a contact note (Option B) or included in the webhook payload (Option A).
+## Before launch — replace sample data
+`production` and `income` blocks are SAMPLE data and show a "Sample data" tag until `verified: true`.
+Only publish real, documentable figures. Also: vslUrl, interviewUrl (group interview calendar), carriers, pixel/GA IDs, team stories, Ryan's story line, FAQ answers (comp, leads, licensing fees), IMO compliance language.
 
-## Placeholders to replace
-vslUrl, testimonialVideo1, interviewUrl (recruiting calendar), metaPixelId, ga4Id, team testimonials, Ryan's story line, IMO compliance language.
+## Later
+Twilio SMS (after number port + A2P 10DLC registration) and a small admin dashboard reading the `applicants` table (status pipeline: new → contacted → interview_booked → licensed → onboarded).

@@ -22,10 +22,10 @@
   var started = false;
 
   function show(idx, back) {
-    steps.forEach(function (s) { s.classList.remove('active', 'leaving-back'); });
+    steps.forEach(function (s) { s.classList.remove('active', 'back-anim'); });
     var s = steps[idx];
     s.classList.add('active');
-    if (back) s.classList.add('leaving-back');
+    if (back) s.classList.add('back-anim');
     stepLabel.textContent = (idx + 1) + ' / ' + total;
     barFill.style.width = ((idx / total) * 100 + 4) + '%';
     backBtn.hidden = idx === 0;
@@ -34,7 +34,7 @@
     var shell = form.getBoundingClientRect();
     if (started && shell.top < 70) form.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
     var first = s.querySelector('input:not([type=checkbox]), select, textarea');
-    if (first && window.matchMedia('(hover: hover)').matches) first.focus({ preventScroll: true });
+    if (first && started && window.matchMedia('(hover: hover)').matches) first.focus({ preventScroll: true });
   }
 
   function err(step, msg) {
@@ -158,7 +158,7 @@
         if (res.ok) return complete();
         var phone = CFG.phone || '';
         notice.textContent = res.status === 503
-          ? 'Applications are being connected right now and could not be sent. Please call or text ' + phone + ' and we will get you scheduled.'
+          ? 'Applications are being connected right now and yours could not be saved. Please call or text ' + phone + ' and we will get you scheduled.'
           : (res.body && res.body.error ? res.body.error : 'Something went wrong sending your application. Please try again, or call/text ' + phone + '.');
         notice.hidden = false;
       })
