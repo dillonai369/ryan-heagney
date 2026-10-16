@@ -32,7 +32,7 @@
   --pad: clamp(20px, 4vw, 64px);
   --ease: cubic-bezier(.2,.7,.1,1);
   --spring: cubic-bezier(.34,1.56,.64,1);
-  --bar-h: 34px; --header-h: 64px;
+  --bar-h: 40px; --header-h: 0px;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -45,7 +45,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 :focus-visible { outline: 2px solid var(--o2); outline-offset: 3px; border-radius: 8px; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 var(--pad); }
-section { position: relative; padding: clamp(72px, 10vw, 128px) 0; }
+section { position: relative; padding: clamp(60px, 8vw, 104px) 0; }
 
 /* ---------- Ambient ---------- */
 .ambient { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
@@ -58,7 +58,7 @@ section { position: relative; padding: clamp(72px, 10vw, 128px) 0; }
 @keyframes drift { to { transform: translate3d(-10vmax, -8vmax, 0); } }
 
 /* ---------- Urgency bar + header ---------- */
-.topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 60; height: var(--bar-h); display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); background: rgba(5,5,5,.86); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 60; height: var(--bar-h); display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); background: rgba(5,5,5,.86); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
 .topbar b { color: var(--text); font-weight: 600; }
 .live-dot { position: relative; width: 7px; height: 7px; border-radius: 50%; background: var(--o1); flex-shrink: 0; }
 .live-dot::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 1px solid var(--o1); animation: ping 2s var(--ease) infinite; }
@@ -471,8 +471,8 @@ section { position: relative; padding: clamp(72px, 10vw, 128px) 0; }
   .phone-stage .orbit::after { transform-origin: 0 184px; }
 }
 @media (max-width: 520px) {
-  :root { --bar-h: 30px; }
-  .topbar { font-size: 10px; letter-spacing: .1em; }
+  :root { --bar-h: 36px; }
+  .topbar { font-size: 11px; letter-spacing: .1em; }
   .brand-sub { letter-spacing: .14em; font-size: 8.5px; }
   .brand-name { font-size: 15px; }
   .captions { display: none; }
